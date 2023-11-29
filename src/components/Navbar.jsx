@@ -23,37 +23,35 @@ const Navbar = () => {
   }));
 
   return (
-    <Box>
-      <AppBar position="sticky">
-        <ToolBar>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <PlayArrowRounded fontSize="large" />
-            <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
-              MediaUI
-            </Typography>
-          </Box>
-          <SerachBox>
-            <Search sx={{ color: "gray" }} />
-            <InputBase placeholder="Search..."></InputBase>
-          </SerachBox>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <Badge badgeContent={4} color="error" sx={{ display: { xs: "none", sm: "block" } }}>
-              <EmailRoundedIcon />
-            </Badge>
-            <Badge badgeContent={4} color="error" sx={{ display: { xs: "none", sm: "block" } }}>
-              <NotificationsRoundedIcon />
-            </Badge>
-            <Avatar src="./me.jpg" alt="UserImage" sx={{ width: "32px", height: "32px" }} onClick={() => setOpen(true)} />
-            <Typography sx={{ display: { xs: "none", sm: "block" } }}>Ansh Gupta</Typography>
-          </Box>
-          <Menu open={open} onClose={() => setOpen(false)} anchorOrigin={{ vertical: "top", horizontal: "right" }} transformOrigin={{ vertical: "top", horizontal: "right" }}>
-            <MenuItem>Profile</MenuItem>
-            <MenuItem>My account</MenuItem>
-            <MenuItem>Logout</MenuItem>
-          </Menu>
-        </ToolBar>
-      </AppBar>
-    </Box>
+    <AppBar position="sticky">
+      <ToolBar>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <PlayArrowRounded fontSize="large" />
+          <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
+            MediaUI
+          </Typography>
+        </Box>
+        <SerachBox>
+          <Search sx={{ color: "gray" }} />
+          <InputBase placeholder="Search..."></InputBase>
+        </SerachBox>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <Badge badgeContent={4} color="error" sx={{ display: { xs: "none", sm: "block" } }}>
+            <EmailRoundedIcon />
+          </Badge>
+          <Badge badgeContent={4} color="error" sx={{ display: { xs: "none", sm: "block" } }}>
+            <NotificationsRoundedIcon />
+          </Badge>
+          <Avatar src="./me.jpg" alt="UserImage" sx={{ width: "32px", height: "32px" }} onClick={() => setOpen(true)} />
+          <Typography sx={{ display: { xs: "none", sm: "block" } }}>Ansh Gupta</Typography>
+        </Box>
+        <Menu open={open} onClose={() => setOpen(false)} anchorOrigin={{ vertical: "top", horizontal: "right" }} transformOrigin={{ vertical: "top", horizontal: "right" }}>
+          <MenuItem>Profile</MenuItem>
+          <MenuItem>My account</MenuItem>
+          <MenuItem>Logout</MenuItem>
+        </Menu>
+      </ToolBar>
+    </AppBar>
   );
 };
 
